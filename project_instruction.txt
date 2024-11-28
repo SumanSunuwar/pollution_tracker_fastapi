@@ -1,0 +1,56 @@
+all commands while working on this project.
+python --version
+Python 3.12.0
+
+## python virtualenv
+python -m venv venv
+source venv/bin/activate
+
+## Basic python package to update or install
+python -m pip install --upgrade pip
+python -m pip install --upgrade setuptools
+python3 -m pip install wheel
+
+## poetry installation for package mgmt.
+pip install poetry
+
+## run project creating db if not already created
+./run.sh
+
+##delete the db completely drop with user 
+./deletedb.sh
+
+
+1. Generate Alembic Migrations
+To create a new migration script based on changes to your models:
+-
+alembic revision --autogenerate -m "Creating migration"
+
+2. Apply Migrations (Upgrade)
+To apply all pending migrations to your database:
+-
+alembic upgrade head
+
+3. Remove All Migration Files
+To remove all migration versions generated in the versions/ folder:
+-
+rm -rf alembic/versions/*
+
+rm -rf alembic/versions/__pycache__
+
+rm -rf migrations/versions/*.py
+
+or 
+
+Using --autogenerate with Database Changes Already Applied
+If the database schema has already been applied manually (or in a different way), Alembic might not detect changes when running --autogenerate.
+
+alembic downgrade base
+alembic upgrade head
+
+
+##check db connection script
+poetry run python -m app.scripts.check_db
+
+##to populate historic data populating using faker
+poetry run python -m app.scripts.populate_data
