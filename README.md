@@ -135,7 +135,6 @@ poetry run python -m app.scripts.populate_data
 
 ---
 
-This README provides a streamlined way to set up, manage, and work with the FastAPI project, including all necessary commands to handle database migrations, checks, and populating the database with sample data. 
-```
+This README provides a streamlined way to set up, manage, and work with this FastAPI project, including all necessary commands to handle database migrations, checks, and populating the database with sample data.
 
-You can copy and paste this into your `README.md` file. This format covers the essential setup steps, migration commands, and utility scripts for your FastAPI project.
+Please reach out to me at sumansunuwar.npl@gmail.com if you have any query regarding the source code. Best!
